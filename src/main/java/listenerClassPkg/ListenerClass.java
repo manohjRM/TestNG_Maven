@@ -25,13 +25,14 @@ public class ListenerClass implements ITestListener {
 	   // When Test case get failed, this method is called.
 	   public void onTestFailure(ITestResult Result)
 	   {
-		   System.out.println("The name of the testcase failed is :"+Result.getName());
 		   MainClass obj = new MainClass();
 		   try {
 				obj.WriteExcelData("Fail");
+				//obj.CaptureScreen(obj.driver);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+		   System.out.println("The name of the testcase failed is :"+Result.getName());
 	   }
 
 	   // When Test case get Skipped, this method is called.
@@ -59,6 +60,7 @@ public class ListenerClass implements ITestListener {
 		   MainClass obj = new MainClass();
 		   try {
 				obj.WriteExcelData("Pass");
+				//obj.CaptureScreen(obj.driver);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

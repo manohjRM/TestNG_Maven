@@ -3,11 +3,18 @@ package mainClassPkg;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
 import dataProviderClassPkg.DataProviderClass;
@@ -26,12 +33,12 @@ public WebDriver driver;
 	public void LaunchBrowser() throws IOException {
 		System.setProperty("webdriver.chrome.driver", "H:\\selenium\\chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 		driver.get(ConfigProp().getProperty("URL"));
 	}
 	@AfterTest
 	public void CloseBrowser() {
-		//driver.quit();
+		driver.quit();
 	}
 	
 	public Object[][] ReadExcelData(String SheetName, String[] header) throws Exception{
@@ -47,5 +54,11 @@ public WebDriver driver;
 		obj1.WriteData(Result, file);
 	}
 	
+	public void CaptureScreen(WebDriver driver, String Name) throws Exception {
+		File screen = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		String addDate = new SimpleDateFormat("yyMMddhhmmss").format(new Date());
+		File scr = new File(System.getProperty("user.dir")+"\\src\\test\\resources\\test"+Name+addDate+".png");
+		FileUtils.copyFile(screen, scr);
+	}
 
 }
