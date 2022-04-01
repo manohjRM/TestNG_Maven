@@ -46,4 +46,24 @@
   		</class>
   	</classes>
   </test>
+  <test name="SocialMediaDetails">
+  	<classes>
+  		<class name="testClassPkg.TestMyInfoModule">
+  			<methods>
+  			<include name="loginToApplication"></include>
+      		<include name="SocialMediaForm"></include>
+      	</methods>
+  		</class>
+  	</classes>
+  </test>
+  <test name="DependentsDetails">
+  	<classes>
+  		<class name="testClassPkg.TestMyInfoModule">
+  			<methods>
+  			<include name="loginToApplication"></include>
+      		<include name="DependentForm"></include>
+      	</methods>
+  		</class>
+  	</classes>
+  </test>
 </suite>

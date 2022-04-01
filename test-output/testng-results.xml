@@ -1,17 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="6" total="9" passed="3" failed="0" skipped="0">
+<testng-results ignored="32" total="51" passed="19" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-01T15:57:16 IST" name="Default suite" finished-at="2022-04-01T15:58:01 IST" duration-ms="45026">
+  <suite started-at="2022-04-01T16:11:05 IST" name="OrangeHRM" finished-at="2022-04-01T16:16:36 IST" duration-ms="330798">
     <groups>
     </groups>
-    <test started-at="2022-04-01T15:57:16 IST" name="Default test" finished-at="2022-04-01T15:58:01 IST" duration-ms="45026">
-      <class name="testClassPkg.TestMyInfoModule">
-        <test-method is-config="true" signature="LaunchBrowser()[pri:0, instance:testClassPkg.TestMyInfoModule@67d48005]" started-at="2022-04-01T15:57:16 IST" name="LaunchBrowser" finished-at="2022-04-01T15:57:24 IST" duration-ms="8650" status="PASS">
+    <test started-at="2022-04-01T16:11:05 IST" name="Login" finished-at="2022-04-01T16:12:00 IST" duration-ms="54390">
+      <class name="testClassPkg.TestLoginPage">
+        <test-method is-config="true" signature="LaunchBrowser()[pri:0, instance:testClassPkg.TestLoginPage@7b9a4292]" started-at="2022-04-01T16:11:05 IST" name="LaunchBrowser" finished-at="2022-04-01T16:11:25 IST" duration-ms="19671" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LaunchBrowser -->
-        <test-method signature="loginToApplication(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClassPkg.TestMyInfoModule@67d48005]" started-at="2022-04-01T15:57:26 IST" name="loginToApplication" data-provider="PersonalDetails" finished-at="2022-04-01T15:57:32 IST" duration-ms="5578" status="PASS">
+        <test-method signature="loginPage(java.lang.String,java.lang.String)[pri:0, instance:testClassPkg.TestLoginPage@7b9a4292]" started-at="2022-04-01T16:11:27 IST" name="loginPage" data-provider="Login" finished-at="2022-04-01T16:11:51 IST" duration-ms="24657" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[george.tofari]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Uy@1Ou4WbC]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginPage -->
+        <test-method signature="loginPage(java.lang.String,java.lang.String)[pri:0, instance:testClassPkg.TestLoginPage@7b9a4292]" started-at="2022-04-01T16:11:52 IST" name="loginPage" data-provider="Login" finished-at="2022-04-01T16:11:59 IST" duration-ms="6720" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Uy@1Ou4WbC]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginPage -->
+        <test-method is-config="true" signature="CloseBrowser()[pri:0, instance:testClassPkg.TestLoginPage@7b9a4292]" started-at="2022-04-01T16:11:59 IST" name="CloseBrowser" finished-at="2022-04-01T16:12:00 IST" duration-ms="601" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+      </class> <!-- testClassPkg.TestLoginPage -->
+    </test> <!-- Login -->
+    <test started-at="2022-04-01T16:12:00 IST" name="valid and Invalid Credentials" finished-at="2022-04-01T16:12:46 IST" duration-ms="46060">
+      <class name="testClassPkg.TestLoginPage">
+        <test-method is-config="true" signature="LaunchBrowser()[pri:0, instance:testClassPkg.TestLoginPage@3c19aaa5]" started-at="2022-04-01T16:12:00 IST" name="LaunchBrowser" finished-at="2022-04-01T16:12:06 IST" duration-ms="6036" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchBrowser -->
+        <test-method signature="loginPage(java.lang.String,java.lang.String)[pri:0, instance:testClassPkg.TestLoginPage@3c19aaa5]" started-at="2022-04-01T16:12:06 IST" name="loginPage" data-provider="Login" finished-at="2022-04-01T16:12:22 IST" duration-ms="15868" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[george.tofari]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Uy@1Ou4WbC]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginPage -->
+        <test-method signature="loginPage(java.lang.String,java.lang.String)[pri:0, instance:testClassPkg.TestLoginPage@3c19aaa5]" started-at="2022-04-01T16:12:22 IST" name="loginPage" data-provider="Login" finished-at="2022-04-01T16:12:29 IST" duration-ms="6938" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Uy@1Ou4WbC]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginPage -->
+        <test-method signature="invalidLoginPage(java.lang.String,java.lang.String)[pri:0, instance:testClassPkg.TestLoginPage@3c19aaa5]" started-at="2022-04-01T16:12:29 IST" name="invalidLoginPage" data-provider="InvalidLogin" finished-at="2022-04-01T16:12:36 IST" depends-on-methods="testClassPkg.TestLoginPage.loginPage" duration-ms="6596" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[adam]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Uy@1Ou4WbC]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidLoginPage -->
+        <test-method signature="invalidLoginPage(java.lang.String,java.lang.String)[pri:0, instance:testClassPkg.TestLoginPage@3c19aaa5]" started-at="2022-04-01T16:12:36 IST" name="invalidLoginPage" data-provider="InvalidLogin" finished-at="2022-04-01T16:12:41 IST" depends-on-methods="testClassPkg.TestLoginPage.loginPage" duration-ms="4701" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[george.tofari]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidLoginPage -->
+        <test-method signature="invalidLoginPage(java.lang.String,java.lang.String)[pri:0, instance:testClassPkg.TestLoginPage@3c19aaa5]" started-at="2022-04-01T16:12:41 IST" name="invalidLoginPage" data-provider="InvalidLogin" finished-at="2022-04-01T16:12:45 IST" depends-on-methods="testClassPkg.TestLoginPage.loginPage" duration-ms="4228" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[adam]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidLoginPage -->
+        <test-method is-config="true" signature="CloseBrowser()[pri:0, instance:testClassPkg.TestLoginPage@3c19aaa5]" started-at="2022-04-01T16:12:45 IST" name="CloseBrowser" finished-at="2022-04-01T16:12:46 IST" duration-ms="657" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+      </class> <!-- testClassPkg.TestLoginPage -->
+    </test> <!-- valid and Invalid Credentials -->
+    <test started-at="2022-04-01T16:12:46 IST" name="PersonalDetails" finished-at="2022-04-01T16:13:20 IST" duration-ms="33643">
+      <class name="testClassPkg.TestMyInfoModule">
+        <test-method is-config="true" signature="LaunchBrowser()[pri:0, instance:testClassPkg.TestMyInfoModule@31304f14]" started-at="2022-04-01T16:12:46 IST" name="LaunchBrowser" finished-at="2022-04-01T16:12:54 IST" duration-ms="7650" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchBrowser -->
+        <test-method signature="loginToApplication(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClassPkg.TestMyInfoModule@31304f14]" started-at="2022-04-01T16:12:54 IST" name="loginToApplication" data-provider="PersonalDetails" finished-at="2022-04-01T16:13:02 IST" duration-ms="8050" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -57,7 +193,479 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginToApplication -->
-        <test-method signature="DependentForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClassPkg.TestMyInfoModule@67d48005]" started-at="2022-04-01T15:57:33 IST" name="DependentForm" data-provider="Dependents" finished-at="2022-04-01T15:57:50 IST" depends-on-methods="testClassPkg.TestMyInfoModule.loginToApplication" duration-ms="17260" status="PASS">
+        <test-method signature="personalDetailsform(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClassPkg.TestMyInfoModule@31304f14]" started-at="2022-04-01T16:13:02 IST" name="personalDetailsform" data-provider="PersonalDetails" finished-at="2022-04-01T16:13:19 IST" depends-on-methods="testClassPkg.TestMyInfoModule.loginToApplication" duration-ms="16784" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[george.tofari]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Uy@1Ou4WbC]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[George]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Tofari]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Single]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Male]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Albanian]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[PN15453465468]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- personalDetailsform -->
+        <test-method is-config="true" signature="CloseBrowser()[pri:0, instance:testClassPkg.TestMyInfoModule@31304f14]" started-at="2022-04-01T16:13:19 IST" name="CloseBrowser" finished-at="2022-04-01T16:13:20 IST" duration-ms="734" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+      </class> <!-- testClassPkg.TestMyInfoModule -->
+    </test> <!-- PersonalDetails -->
+    <test started-at="2022-04-01T16:13:20 IST" name="ContactDetails" finished-at="2022-04-01T16:14:38 IST" duration-ms="78315">
+      <class name="testClassPkg.TestMyInfoModule">
+        <test-method is-config="true" signature="LaunchBrowser()[pri:0, instance:testClassPkg.TestMyInfoModule@128d2484]" started-at="2022-04-01T16:13:20 IST" name="LaunchBrowser" finished-at="2022-04-01T16:13:29 IST" duration-ms="8955" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchBrowser -->
+        <test-method signature="loginToApplication(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClassPkg.TestMyInfoModule@128d2484]" started-at="2022-04-01T16:13:29 IST" name="loginToApplication" data-provider="PersonalDetails" finished-at="2022-04-01T16:13:46 IST" duration-ms="17052" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[george.tofari]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Uy@1Ou4WbC]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[George]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Tofari]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Single]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Male]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Albanian]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[PN15453465468]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToApplication -->
+        <test-method signature="contactDetailsForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,double,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClassPkg.TestMyInfoModule@128d2484]" started-at="2022-04-01T16:13:46 IST" name="contactDetailsForm" data-provider="ContactDetails" finished-at="2022-04-01T16:14:15 IST" depends-on-methods="testClassPkg.TestMyInfoModule.loginToApplication" duration-ms="29022" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[george.tofari]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Uy@1Ou4WbC]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[181, Richie Street]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Downtown south]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Downtown]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[India]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Alaska]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[9.565633312E9]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[george.tofari@orangehrm.com]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[george.tofari@gmail.com]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Tamil nadu]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- contactDetailsForm -->
+        <test-method signature="contactDetailsForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,double,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClassPkg.TestMyInfoModule@128d2484]" started-at="2022-04-01T16:14:15 IST" name="contactDetailsForm" data-provider="ContactDetails" finished-at="2022-04-01T16:14:37 IST" depends-on-methods="testClassPkg.TestMyInfoModule.loginToApplication" duration-ms="22217" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[george.tofari]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Uy@1Ou4WbC]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[181, Richie Street]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Downtown south]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Downtown]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[United States]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Alaska]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[9.565633312E9]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[george.tofari@orangehrm.com]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[george.tofari@gmail.com]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Alaska]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- contactDetailsForm -->
+        <test-method is-config="true" signature="CloseBrowser()[pri:0, instance:testClassPkg.TestMyInfoModule@128d2484]" started-at="2022-04-01T16:14:38 IST" name="CloseBrowser" finished-at="2022-04-01T16:14:38 IST" duration-ms="465" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+      </class> <!-- testClassPkg.TestMyInfoModule -->
+    </test> <!-- ContactDetails -->
+    <test started-at="2022-04-01T16:14:38 IST" name="EmergencyContact" finished-at="2022-04-01T16:14:58 IST" duration-ms="19468">
+      <class name="testClassPkg.TestMyInfoModule">
+        <test-method is-config="true" signature="LaunchBrowser()[pri:0, instance:testClassPkg.TestMyInfoModule@4c583ecf]" started-at="2022-04-01T16:14:38 IST" name="LaunchBrowser" finished-at="2022-04-01T16:14:47 IST" duration-ms="8549" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchBrowser -->
+        <test-method signature="loginToApplication(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClassPkg.TestMyInfoModule@4c583ecf]" started-at="2022-04-01T16:14:47 IST" name="loginToApplication" data-provider="PersonalDetails" finished-at="2022-04-01T16:14:57 IST" duration-ms="10230" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[george.tofari]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Uy@1Ou4WbC]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[George]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Tofari]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Single]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Male]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Albanian]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[PN15453465468]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToApplication -->
+        <test-method is-config="true" signature="CloseBrowser()[pri:0, instance:testClassPkg.TestMyInfoModule@4c583ecf]" started-at="2022-04-01T16:14:57 IST" name="CloseBrowser" finished-at="2022-04-01T16:14:58 IST" duration-ms="496" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+      </class> <!-- testClassPkg.TestMyInfoModule -->
+    </test> <!-- EmergencyContact -->
+    <test started-at="2022-04-01T16:14:58 IST" name="SocialMediaDetails" finished-at="2022-04-01T16:15:35 IST" duration-ms="37728">
+      <class name="testClassPkg.TestMyInfoModule">
+        <test-method is-config="true" signature="LaunchBrowser()[pri:0, instance:testClassPkg.TestMyInfoModule@1aafa419]" started-at="2022-04-01T16:14:58 IST" name="LaunchBrowser" finished-at="2022-04-01T16:15:03 IST" duration-ms="5384" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchBrowser -->
+        <test-method signature="loginToApplication(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClassPkg.TestMyInfoModule@1aafa419]" started-at="2022-04-01T16:15:03 IST" name="loginToApplication" data-provider="PersonalDetails" finished-at="2022-04-01T16:15:12 IST" duration-ms="8769" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[george.tofari]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Uy@1Ou4WbC]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[George]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Tofari]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Single]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Male]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Albanian]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[PN15453465468]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToApplication -->
+        <test-method signature="SocialMediaForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,double)[pri:0, instance:testClassPkg.TestMyInfoModule@1aafa419]" started-at="2022-04-01T16:15:12 IST" name="SocialMediaForm" data-provider="SocialMedia" finished-at="2022-04-01T16:15:26 IST" depends-on-methods="testClassPkg.TestMyInfoModule.loginToApplication" duration-ms="13614" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[george.tofari]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Uy@1Ou4WbC]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Facebook]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Tofari]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[https://fb.com/tofari]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SocialMediaForm -->
+        <test-method signature="SocialMediaForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,double)[pri:0, instance:testClassPkg.TestMyInfoModule@1aafa419]" started-at="2022-04-01T16:15:26 IST" name="SocialMediaForm" data-provider="SocialMedia" finished-at="2022-04-01T16:15:35 IST" depends-on-methods="testClassPkg.TestMyInfoModule.loginToApplication" duration-ms="8635" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[george.tofari]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Uy@1Ou4WbC]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Twitter]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Cousin]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[https://twt.com/george]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[0.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SocialMediaForm -->
+        <test-method is-config="true" signature="CloseBrowser()[pri:0, instance:testClassPkg.TestMyInfoModule@1aafa419]" started-at="2022-04-01T16:15:35 IST" name="CloseBrowser" finished-at="2022-04-01T16:15:35 IST" duration-ms="506" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+      </class> <!-- testClassPkg.TestMyInfoModule -->
+    </test> <!-- SocialMediaDetails -->
+    <test started-at="2022-04-01T16:15:35 IST" name="DependentsDetails" finished-at="2022-04-01T16:16:36 IST" duration-ms="60929">
+      <class name="testClassPkg.TestMyInfoModule">
+        <test-method is-config="true" signature="LaunchBrowser()[pri:0, instance:testClassPkg.TestMyInfoModule@235834f2]" started-at="2022-04-01T16:15:35 IST" name="LaunchBrowser" finished-at="2022-04-01T16:15:58 IST" duration-ms="22778" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchBrowser -->
+        <test-method signature="loginToApplication(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClassPkg.TestMyInfoModule@235834f2]" started-at="2022-04-01T16:15:58 IST" name="loginToApplication" data-provider="PersonalDetails" finished-at="2022-04-01T16:16:11 IST" duration-ms="12255" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[george.tofari]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Uy@1Ou4WbC]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[George]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Tofari]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Single]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Male]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Albanian]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[PN15453465468]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToApplication -->
+        <test-method signature="DependentForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClassPkg.TestMyInfoModule@235834f2]" started-at="2022-04-01T16:16:11 IST" name="DependentForm" data-provider="Dependents" finished-at="2022-04-01T16:16:28 IST" depends-on-methods="testClassPkg.TestMyInfoModule.loginToApplication" duration-ms="16947" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -93,7 +701,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DependentForm -->
-        <test-method signature="DependentForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClassPkg.TestMyInfoModule@67d48005]" started-at="2022-04-01T15:57:50 IST" name="DependentForm" data-provider="Dependents" finished-at="2022-04-01T15:58:00 IST" depends-on-methods="testClassPkg.TestMyInfoModule.loginToApplication" duration-ms="9774" status="PASS">
+        <test-method signature="DependentForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClassPkg.TestMyInfoModule@235834f2]" started-at="2022-04-01T16:16:28 IST" name="DependentForm" data-provider="Dependents" finished-at="2022-04-01T16:16:36 IST" depends-on-methods="testClassPkg.TestMyInfoModule.loginToApplication" duration-ms="7777" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -129,11 +737,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DependentForm -->
-        <test-method is-config="true" signature="CloseBrowser()[pri:0, instance:testClassPkg.TestMyInfoModule@67d48005]" started-at="2022-04-01T15:58:00 IST" name="CloseBrowser" finished-at="2022-04-01T15:58:01 IST" duration-ms="559" status="PASS">
+        <test-method is-config="true" signature="CloseBrowser()[pri:0, instance:testClassPkg.TestMyInfoModule@235834f2]" started-at="2022-04-01T16:16:36 IST" name="CloseBrowser" finished-at="2022-04-01T16:16:36 IST" duration-ms="480" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseBrowser -->
       </class> <!-- testClassPkg.TestMyInfoModule -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- DependentsDetails -->
+  </suite> <!-- OrangeHRM -->
 </testng-results>
