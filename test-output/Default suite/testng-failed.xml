@@ -7,8 +7,9 @@
         <methods>
           <include name="CloseBrowser"/>
           <include name="loginToApplication"/>
-          <include name="DependentForm" invocation-numbers="0 1"/>
           <include name="LaunchBrowser"/>
+          <include name="getResult"/>
+          <include name="AddLanguage"/>
         </methods>
       </class> <!-- testClassPkg.TestMyInfoModule -->
     </classes>

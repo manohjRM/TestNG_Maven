@@ -12,6 +12,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
@@ -40,6 +42,18 @@ public WebDriver driver;
 	public void CloseBrowser() {
 		driver.quit();
 	}
+	@AfterMethod
+	public void getResult(ITestResult result) throws Exception {
+		if(result.getStatus() == ITestResult.FAILURE){
+			MainClass.CaptureScreen(driver, result.getName());
+			WriteExcelData("Fail");
+		}else if(result.getStatus() == ITestResult.SKIP){
+			WriteExcelData("Skipped");
+		}else if(result.getStatus() == ITestResult.SUCCESS){
+			MainClass.CaptureScreen(driver, result.getName());
+			WriteExcelData("Pass");
+		}
+	}
 	
 	public Object[][] ReadExcelData(String SheetName, String[] header) throws Exception{
 		File file = new File(System.getProperty("user.dir")+"\\src\\test\\resources\\TestData.xlsx");
@@ -54,10 +68,10 @@ public WebDriver driver;
 		obj1.WriteData(Result, file);
 	}
 	
-	public void CaptureScreen(WebDriver driver, String Name) throws Exception {
+	public static void CaptureScreen(WebDriver driver, String Name) throws Exception {
 		File screen = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		String addDate = new SimpleDateFormat("yyMMddhhmmss").format(new Date());
-		File scr = new File(System.getProperty("user.dir")+"\\src\\test\\resources\\test"+Name+addDate+".png");
+		File scr = new File(System.getProperty("user.dir")+"\\src\\test\\resources\\screenshots\\test"+Name+addDate+".png");
 		FileUtils.copyFile(screen, scr);
 	}
 

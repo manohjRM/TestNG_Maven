@@ -95,7 +95,7 @@ public class MyInfoPageObjects {
 	public WebElement save;
 	@FindBy(xpath="//div[@class='toast-message']")
 	public WebElement tmsg;
-	@FindBy(xpath="//ul[@id='top-menu']//li//a[@id='top-menu-trigger']")
+	@FindBy(xpath="//ul[@id='top-menu']//following::a[@id='top-menu-trigger']")
 	public WebElement menuMod;
 	@FindBy(xpath="//span[@translate='Contact Details']")
 	public WebElement conDetails;
@@ -225,6 +225,7 @@ public class MyInfoPageObjects {
 	public WebElement socialLink;
 	@FindBy(xpath="//label[@for='allowShare']")
 	public WebElement allowShare;
+	public String socialList = "//div[@class='dropdown-menu show']//div//ul/li/a/span";
 	
 	public void fillSocialMediadetails(String SocialType, String Handle, String Link, double Share) {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -233,17 +234,7 @@ public class MyInfoPageObjects {
 		socialMedia.click();
 		addSocial.click();
 		socialType.click();
-		List<WebElement> liType = driver.findElements(By.xpath("//div[@class='dropdown-menu show']//div//ul/li/a/span"));
-		System.out.println(liType.size());
-		for(WebElement typ : liType) {
-			
-			if(SocialType.equalsIgnoreCase(typ.getText())) {
-				System.out.println(typ.getText());
-				Actions act = new Actions(driver);
-				act.moveToElement(typ).click().build().perform();
-				break;
-			}
-		}
+		obj.SelectAction(driver, SocialType, socialList);
 		handle.sendKeys(Handle);
 		socialLink.sendKeys(Link);
 		int sh = (int) Share;
@@ -265,6 +256,7 @@ public class MyInfoPageObjects {
 	public WebElement selectRelation;
 	@FindBy(xpath="//input[@id='relationship']")
 	public WebElement specifyRelation;
+	public String relationList = "//div[@class='dropdown-menu show']//div//ul/li/a/span";
 	
 	public void fillDependents(String Name, String DoB, String Relation, String Others) {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -275,22 +267,166 @@ public class MyInfoPageObjects {
 		nameDependent.sendKeys(Name);
 		dobDependent.sendKeys(String.valueOf(DoB));
 		selectRelation.click();
-		List<WebElement> liRel = driver.findElements(By.xpath("//div[@class='dropdown-menu show']//div//ul/li/a/span"));
-		System.out.println(liRel.size());
-		for(WebElement typ : liRel) {
-			
-			if(Relation.equalsIgnoreCase(typ.getText())) {
-				System.out.println(typ.getText());
-				Actions act = new Actions(driver);
-				act.moveToElement(typ).click().build().perform();
-				break;
-			}
-		}
+		obj.SelectAction(driver, Relation, relationList);
 		try {
 			specifyRelation.sendKeys(Others);
 		}catch(Exception relation) {
 			
 		}
+		saveForm.click();
+	}
+	
+	@FindBy(xpath="//span[@translate='Immigration']")
+	public WebElement immigration;
+	@FindBy(xpath="//a[@ng-click='immigrations.addImmigrations()']//i[@class='material-icons'][normalize-space()='add']")
+	public WebElement addImmigration;
+	@FindBy(xpath="//label[normalize-space()='Passport']")
+	public WebElement passport;
+	@FindBy(xpath="//label[normalize-space()='Visa']")
+	public WebElement visa;
+	@FindBy(xpath="//input[@id='number']")
+	public WebElement docNumber;
+	@FindBy(xpath="//input[@id='issuedDate']")
+	public WebElement issueDate;
+	@FindBy(xpath="//input[@id='expiryDate']")
+	public WebElement expiryDate;
+	@FindBy(xpath="//input[@id='reviewDate']")
+	public WebElement reviewDate;
+	@FindBy(xpath="//input[@id='status']")
+	public WebElement eligibleStatus;
+	@FindBy(xpath="//textarea[@id='notes']")
+	public WebElement comments;
+	@FindBy(xpath="//div[@class='filter-option']")
+	public WebElement selectCountry;
+	public String issueCon = "(//div[@class='form-group col-6'])[2]//following::div[@class='dropdown-menu show']//div//ul/li/a/span";
+	
+	public void fillImmigrationDetails(String Document, String DNumber, String IssueDate, 
+			String ExpiryDate, String ReviewDate, String Status, String Comments, String IssueCountry) {
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		myInfoTab.click();
+		menuMod.click();
+		immigration.click();
+		addImmigration.click();
+		if(Document.equalsIgnoreCase("Passport")) {
+			passport.click();
+		}else if(Document.equalsIgnoreCase("Visa")) {
+			visa.click();
+		}
+		docNumber.sendKeys(DNumber);
+		issueDate.sendKeys(IssueDate);
+		expiryDate.sendKeys(ExpiryDate);
+		reviewDate.sendKeys(ReviewDate);
+		eligibleStatus.sendKeys(Status);
+		comments.sendKeys(Comments);
+		selectCountry.click();
+		obj.SelectAction(driver, IssueCountry, issueCon);
+		saveForm.click();
+	}
+	
+	@FindBy(xpath="//span[@translate='Memberships']")
+	public WebElement membership;
+	@FindBy(xpath="//a[@ng-click='memberships.addMembership()']//i[@class='material-icons'][normalize-space()='add']")
+	public WebElement addMembership;
+	@FindBy(xpath="//div[@class='modal-body']//following::div[@class='form-group col-12']//button[@data-id='membership']")
+	public WebElement selectMembership;
+	public String membershipLists = "//div[@class='dropdown-menu show']//div//ul/li/a/span";
+	@FindBy(xpath="//div[@class='modal-body']//following::div[@class='form-group col-12']//button[@data-id='subscriptionPaidBy']")
+	public WebElement paidBy;
+	
+	public void fillMembershipForm(String Membership) {
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		myInfoTab.click();
+		menuMod.click();
+		membership.click();
+		addMembership.click();
+		selectMembership.click();
+		obj.SelectAction(driver, Membership, membershipLists);
+		saveForm.click();
+	}
+	
+	@FindBy(xpath="//span[@translate='Qualifications']")
+	public WebElement qualification;
+	@FindBy(xpath="//*[@id='addButton']/div/a")
+	public WebElement addQualification;
+	String addQual = "//*[@id='additem-options-dropdown-qualifications']/li/a";
+	@FindBy(xpath="//input[@id='employer']")
+	public WebElement employerName;
+	@FindBy(xpath="//input[@id='jobtitle']")
+	public WebElement jobTitle;
+	
+	public void fillWorkExperience(String Employer, String Job) {
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		myInfoTab.click();
+		menuMod.click();
+		qualification.click();
+		addQualification.click();
+		obj.SelectAction(driver, "Work Experience", addQual);
+		employerName.sendKeys(Employer);
+		jobTitle.sendKeys(Job);
+		saveForm.click();
+	}
+	
+	@FindBy(xpath="//button[@data-id='educationId']")
+	public WebElement educationLevel;
+	String eduLevel = "//div[@class='dropdown-menu show']//div//ul/li/a/span";
+	@FindBy(xpath="//input[@id='institute']")
+	public WebElement institute;
+	@FindBy(xpath="//input[@id='major']")
+	public WebElement major;
+	
+	public void fillEducationForm(String Level, String Institute, String Major) throws Exception {
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		myInfoTab.click();
+		menuMod.click();
+		qualification.click();
+		addQualification.click();
+		obj.SelectAction(driver, "Education", addQual);
+		educationLevel.click();
+		obj.SelectAction(driver, Level, eduLevel);
+		institute.sendKeys(Institute);
+		major.sendKeys(Major);
+		Thread.sleep(3000);
+		saveForm.click();
+	}
+	
+	@FindBy(xpath="//button[@data-id='skillId']")
+	public WebElement skillList;
+	String skill = "//*[@id=\"bs-select-1\"]/ul/li";
+	public void fillSkillsForm(String Skill) {
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		myInfoTab.click();
+		menuMod.click();
+		qualification.click();
+		addQualification.click();
+		obj.SelectAction(driver, "Skill", addQual);
+		skillList.click();
+		obj.SelectAction(driver, Skill, skill);
+		saveForm.click();
+	}
+	
+	@FindBy(xpath="//button[@data-id='langId']")
+	public WebElement language;
+	String lang = "//div[@class='dropdown-menu show']//div//ul/li/a/span";
+	@FindBy(xpath="//button[@data-id='fluency']")
+	public WebElement fluency;
+	String fluent = "//div[@class='dropdown-menu show']//div//ul/li/a/span";
+	@FindBy(xpath="//button[@data-id='competency']")
+	public WebElement competency;
+	String compete = "//div[@class='dropdown-menu show']//div//ul/li/a/span";
+	public void fillLanguageForm(String Language, String Fluency, String Competency) {
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		myInfoTab.click();
+		menuMod.click();
+		qualification.click();
+		addQualification.click();
+		obj.SelectAction(driver, "Language", addQual);
+		language.click();
+		obj.SelectAction(driver, Language, lang);
+		fluency.click();
+		obj.SelectAction(driver, Fluency, fluent);
+		competency.click();
+		obj.SelectAction(driver, Competency, compete);
 		saveForm.click();
 	}
 }

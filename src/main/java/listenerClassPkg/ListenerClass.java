@@ -25,13 +25,6 @@ public class ListenerClass implements ITestListener {
 	   // When Test case get failed, this method is called.
 	   public void onTestFailure(ITestResult Result)
 	   {
-		   MainClass obj = new MainClass();
-		   try {
-				obj.WriteExcelData("Fail");
-				//obj.CaptureScreen(obj.driver);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
 		   System.out.println("The name of the testcase failed is :"+Result.getName());
 	   }
 
@@ -39,12 +32,12 @@ public class ListenerClass implements ITestListener {
 	   public void onTestSkipped(ITestResult Result)
 	   {
 		   System.out.println("The name of the testcase Skipped is :"+Result.getName());
-		   MainClass obj = new MainClass();
+		  /* MainClass obj = new MainClass();
 		   try {
 				obj.WriteExcelData("Skipped");
 			} catch (Exception e) {
 				e.printStackTrace();
-			}
+			}*/
 	   }
 
 	   // When Test case get Started, this method is called.
@@ -57,13 +50,14 @@ public class ListenerClass implements ITestListener {
 	   public void onTestSuccess(ITestResult Result)
 	   {
 		   System.out.println("The name of the testcase passed is :"+Result.getName());
-		   MainClass obj = new MainClass();
+		 /*  MainClass obj = new MainClass();
 		   try {
-				obj.WriteExcelData("Pass");
+				obj.CaptureScreen(obj.driver, obj.driver.getTitle());
+			   obj.WriteExcelData("Pass");
 				//obj.CaptureScreen(obj.driver);
 			} catch (Exception e) {
 				e.printStackTrace();
-			}
+			}*/
 	   }
 }
 

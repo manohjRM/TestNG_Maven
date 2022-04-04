@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -101,5 +102,91 @@ public class TestMyInfoModule extends TestLoginPage{
 		Assert.assertEquals(obj1.tmsg.getText(), "Successfully Saved");
 		System.out.println(obj1.tmsg.getText());
 		CaptureScreen(driver, driver.getTitle());
+	}
+	
+	@Test(dataProvider = "Immigration", dataProviderClass = DataProviderClass.class, dependsOnMethods = "loginToApplication")
+	void ImmigrationForm(String UserName, String Password, String Document, String DNumber, String IssueDate, 
+			String ExpiryDate, String ReviewDate, String Status, String Comments, String IssueCountry) throws Exception {
+		
+		MyInfoPageObjects obj1 = new MyInfoPageObjects(driver);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		obj1.fillImmigrationDetails(Document, DNumber, IssueDate, ExpiryDate, ReviewDate, Status, Comments, IssueCountry);
+		System.out.println(driver.getTitle());
+		Thread.sleep(2500);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOf(obj1.tmsg));
+		Assert.assertEquals(obj1.tmsg.getText(), "Successfully Saved");
+		System.out.println(obj1.tmsg.getText());
+		CaptureScreen(driver, driver.getTitle());
+		Thread.sleep(2000);
+	}
+	
+	@Test(dataProvider = "Membership", dataProviderClass = DataProviderClass.class, dependsOnMethods = "loginToApplication")
+	void MembershipForm(String UserName, String Password, String Membership) throws Exception {
+		MyInfoPageObjects obj1 = new MyInfoPageObjects(driver);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		obj1.fillMembershipForm(Membership);
+		System.out.println(driver.getTitle());
+		Thread.sleep(2500);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOf(obj1.tmsg));
+		Assert.assertEquals(obj1.tmsg.getText(), "Successfully Saved");
+		System.out.println(obj1.tmsg.getText());
+		CaptureScreen(driver, driver.getTitle());
+		Thread.sleep(2000);
+	}
+	@Test(dependsOnMethods = "loginToApplication")
+	void AddEducationForm() throws Exception {
+		MyInfoPageObjects obj1 = new MyInfoPageObjects(driver);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		obj1.fillEducationForm("Bachelor's Degree", "MIT", "Science");
+		System.out.println(driver.getTitle());
+		Thread.sleep(2500);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOf(obj1.tmsg));
+		Assert.assertEquals(obj1.tmsg.getText(), "Successfully Saved");
+		System.out.println(obj1.tmsg.getText());
+		Thread.sleep(2000);
+	}
+	@Test(dependsOnMethods = "loginToApplication")
+	void AddWorkExperienceForm() throws Exception {
+		MyInfoPageObjects obj1 = new MyInfoPageObjects(driver);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		obj1.fillWorkExperience("CTS", "QA");
+		System.out.println(driver.getTitle());
+		Thread.sleep(2500);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOf(obj1.tmsg));
+		Assert.assertEquals(obj1.tmsg.getText(), "Successfully Saved");
+		System.out.println(obj1.tmsg.getText());
+		Thread.sleep(2000);
+	}
+	
+	@Test(dependsOnMethods = "loginToApplication")
+	void AddSkillsForm() throws Exception {
+		MyInfoPageObjects obj1 = new MyInfoPageObjects(driver);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		obj1.fillSkillsForm("Programming");
+		System.out.println(driver.getTitle());
+		Thread.sleep(2500);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOf(obj1.tmsg));
+		Assert.assertEquals(obj1.tmsg.getText(), "Successfully Saved");
+		System.out.println(obj1.tmsg.getText());
+		Thread.sleep(2000);
+	}
+	
+	@Test(dependsOnMethods = "loginToApplication")
+	void AddLanguage() throws Exception {
+		MyInfoPageObjects obj1 = new MyInfoPageObjects(driver);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		obj1.fillLanguageForm("English", "Writing", "Good");
+		System.out.println(driver.getTitle());
+		Thread.sleep(2500);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOf(obj1.tmsg));
+		Assert.assertEquals(obj1.tmsg.getText(), "Successfully Saved");
+		System.out.println(obj1.tmsg.getText());
+		Thread.sleep(2000);
 	}
 }

@@ -79,6 +79,22 @@ public class DataProviderClass extends MainClass{
 		return data;
 	}
 	
+	@DataProvider(name="Immigration")
+	public Object[][] fillImmigrationDetails() throws Exception{
+		shName = "Immigration";
+		String[] header = {"UserName", "Password", "Document", "Number", "IssueDate", "ExpiryDate", "ReviewDate", "EligibleStatus", "Comments", "IssueBy"};
+		Object[][] data = ReadExcelData(shName, header);
+		return data;
+	}
+	
+	@DataProvider(name="Membership")
+	public Object[][] fillMembershipDetails() throws Exception{
+		shName = "Membership";
+		String[] header = {"UserName", "Password", "Membership"};
+		Object[][] data = ReadExcelData(shName, header);
+		return data;
+	}
+	
 	public Object[][] ReadExcel(String SheetName, File FilePath, String[] header) throws Exception {
 		Object[][] data = null;
 		FileInputStream fis = new FileInputStream(FilePath);
