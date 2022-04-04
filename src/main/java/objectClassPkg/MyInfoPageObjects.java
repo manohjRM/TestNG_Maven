@@ -1,18 +1,15 @@
 package objectClassPkg;
 
 import java.time.Duration;
-import java.util.Iterator;
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import mainClassPkg.ReUseClass;
@@ -125,7 +122,7 @@ public class MyInfoPageObjects {
 			for(WebElement s : liCon) {
 				if(s.getText().equalsIgnoreCase(Country)) {
 					this.saveCountry = s.getText();
-					System.out.println(s.getText());
+					System.out.println(saveCountry);
 					//wait.until(ExpectedConditions.refreshed(ExpectedConditions.stalenessOf(s)));
 					Actions act = new Actions(driver);
 					act.moveToElement(s).click().build().perform();

@@ -8,48 +8,235 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">79,334</td><td></td><td></td></tr>
+<tr><th colspan="8">OrangeHRM</th></tr>
+<tr><td><a href="#t0">Login</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">83,608</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">valid and Invalid Credentials</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">307,664</td><td></td><td></td></tr>
+<tr><td><a href="#t2">PersonalDetails</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">68,428</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t3">ContactDetails</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">64,696</td><td></td><td></td></tr>
+<tr><td><a href="#t4">EmergencyContact</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">29,190</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t5">SocialMediaDetails</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">54,316</td><td></td><td></td></tr>
+<tr><td><a href="#t6">DependentsDetails</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">40,594</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t7">ImmigrationDetails</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">62,641</td><td></td><td></td></tr>
+<tr><td><a href="#t8">MembershipDetails</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">69,437</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t9">EducationDetails</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">70,141</td><td></td><td></td></tr>
+<tr><td><a href="#t10">WorkExperienceDetails</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">61,484</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t11">LanguageDetails</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">77,825</td><td></td><td></td></tr>
+<tr><td><a href="#t12">SkillsDetails</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">110,455</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">27</th><th class="num">0</th><th class="num">0</th><th class="num attn">10</th><th class="num">1,100,479</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testClassPkg.TestMyInfoModule</td><td><a href="#m0">AddLanguage</a></td><td rowspan="1">1649053757681</td><td rowspan="1">27244</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testClassPkg.TestMyInfoModule</td><td><a href="#m1">loginToApplication</a></td><td rowspan="1">1649053731272</td><td rowspan="1">25525</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">OrangeHRM</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Login &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">testClassPkg.TestLoginPage</td><td><a href="#m0">loginPage</a></td><td rowspan="2">1649063846843</td><td rowspan="2">15403</td></tr><tr class="passedeven"><td><a href="#m1">loginPage</a></td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">valid and Invalid Credentials &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">testClassPkg.TestLoginPage</td><td><a href="#m2">invalidLoginPage</a></td><td rowspan="3">1649064051306</td><td rowspan="3">36700</td></tr><tr class="passedeven"><td><a href="#m3">invalidLoginPage</a></td></tr><tr class="passedeven"><td><a href="#m4">invalidLoginPage</a></td></tr><tr class="passedeven"><td><a href="#m5">loginPage</a></td><td rowspan="2">1649063894289</td><td rowspan="2">145220</td></tr><tr class="passedeven"><td><a href="#m6">loginPage</a></td></tr></tbody>
+<tbody id="t2"><tr><th colspan="4">PersonalDetails &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">testClassPkg.TestMyInfoModule</td><td><a href="#m7">loginToApplication</a></td><td rowspan="1">1649064204392</td><td rowspan="1">13556</td></tr><tr class="passedeven"><td><a href="#m8">personalDetailsform</a></td><td rowspan="1">1649064219117</td><td rowspan="1">18758</td></tr></tbody>
+<tbody id="t3"><tr><th colspan="4">ContactDetails &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">testClassPkg.TestMyInfoModule</td><td><a href="#m9">contactDetailsForm</a></td><td rowspan="2">1649064280647</td><td rowspan="2">22715</td></tr><tr class="passedeven"><td><a href="#m10">contactDetailsForm</a></td></tr><tr class="passedeven"><td><a href="#m11">loginToApplication</a></td><td rowspan="1">1649064246141</td><td rowspan="1">7987</td></tr></tbody>
+<tbody id="t4"><tr><th colspan="4">EmergencyContact &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testClassPkg.TestMyInfoModule</td><td><a href="#m12">loginToApplication</a></td><td rowspan="1">1649064317402</td><td rowspan="1">15140</td></tr></tbody>
+<tbody id="t5"><tr><th colspan="4">SocialMediaDetails &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">testClassPkg.TestMyInfoModule</td><td><a href="#m13">SocialMediaForm</a></td><td rowspan="2">1649064362582</td><td rowspan="2">15772</td></tr><tr class="passedeven"><td><a href="#m14">SocialMediaForm</a></td></tr><tr class="passedeven"><td><a href="#m15">loginToApplication</a></td><td rowspan="1">1649064345827</td><td rowspan="1">16227</td></tr></tbody>
+<tbody id="t6"><tr><th colspan="4">DependentsDetails &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">testClassPkg.TestMyInfoModule</td><td><a href="#m16">DependentForm</a></td><td rowspan="2">1649064402384</td><td rowspan="2">16989</td></tr><tr class="passedeven"><td><a href="#m17">DependentForm</a></td></tr><tr class="passedeven"><td><a href="#m18">loginToApplication</a></td><td rowspan="1">1649064393419</td><td rowspan="1">8487</td></tr></tbody>
+<tbody id="t7"><tr><th colspan="4">ImmigrationDetails &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">testClassPkg.TestMyInfoModule</td><td><a href="#m19">ImmigrationForm</a></td><td rowspan="2">1649064474455</td><td rowspan="2">15896</td></tr><tr class="passedeven"><td><a href="#m20">ImmigrationForm</a></td></tr><tr class="passedeven"><td><a href="#m21">loginToApplication</a></td><td rowspan="1">1649064439162</td><td rowspan="1">10051</td></tr></tbody>
+<tbody id="t8"><tr><th colspan="4">MembershipDetails &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">testClassPkg.TestMyInfoModule</td><td><a href="#m22">MembershipForm</a></td><td rowspan="2">1649064558619</td><td rowspan="2">1136</td></tr><tr class="failedeven"><td><a href="#m23">MembershipForm</a></td></tr><tr><th colspan="4">MembershipDetails &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testClassPkg.TestMyInfoModule</td><td><a href="#m24">loginToApplication</a></td><td rowspan="1">1649064496953</td><td rowspan="1">8534</td></tr></tbody>
+<tbody id="t9"><tr><th colspan="4">EducationDetails &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">testClassPkg.TestMyInfoModule</td><td><a href="#m25">AddEducationForm</a></td><td rowspan="2">1649064615056</td><td rowspan="2">14924</td></tr><tr class="failedeven"><td><a href="#m26">AddEducationForm</a></td></tr><tr><th colspan="4">EducationDetails &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testClassPkg.TestMyInfoModule</td><td><a href="#m27">loginToApplication</a></td><td rowspan="1">1649064575511</td><td rowspan="1">15370</td></tr></tbody>
+<tbody id="t10"><tr><th colspan="4">WorkExperienceDetails &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">testClassPkg.TestMyInfoModule</td><td><a href="#m28">AddWorkExperienceForm</a></td><td rowspan="2">1649064657761</td><td rowspan="2">22815</td></tr><tr class="failedeven"><td><a href="#m29">AddWorkExperienceForm</a></td></tr><tr><th colspan="4">WorkExperienceDetails &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testClassPkg.TestMyInfoModule</td><td><a href="#m30">loginToApplication</a></td><td rowspan="1">1649064637717</td><td rowspan="1">19503</td></tr></tbody>
+<tbody id="t11"><tr><th colspan="4">LanguageDetails &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">testClassPkg.TestMyInfoModule</td><td><a href="#m31">AddLanguage</a></td><td rowspan="2">1649064768197</td><td rowspan="2">1080</td></tr><tr class="failedeven"><td><a href="#m32">AddLanguage</a></td></tr><tr><th colspan="4">LanguageDetails &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testClassPkg.TestMyInfoModule</td><td><a href="#m33">loginToApplication</a></td><td rowspan="1">1649064698778</td><td rowspan="1">9047</td></tr></tbody>
+<tbody id="t12"><tr><th colspan="4">SkillsDetails &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">testClassPkg.TestMyInfoModule</td><td><a href="#m34">AddSkillsForm</a></td><td rowspan="2">1649064790437</td><td rowspan="2">17786</td></tr><tr class="failedeven"><td><a href="#m35">AddSkillsForm</a></td></tr><tr><th colspan="4">SkillsDetails &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testClassPkg.TestMyInfoModule</td><td><a href="#m36">loginToApplication</a></td><td rowspan="1">1649064779760</td><td rowspan="1">10398</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">testClassPkg.TestMyInfoModule#AddLanguage</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Successfully Saved] but found [Failed to Save]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-	at org.testng.Assert.assertEquals(Assert.java:122)
-	at org.testng.Assert.assertEquals(Assert.java:629)
-	at org.testng.Assert.assertEquals(Assert.java:639)
-	at testClassPkg.TestMyInfoModule.AddLanguage(TestMyInfoModule.java:188)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+<h2>Login</h2><h3 id="m0">testClassPkg.TestLoginPage#loginPage</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>Admin</td><td>Uy@1Ou4WbC</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testClassPkg.TestLoginPage#loginPage</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>valid and Invalid Credentials</h2><h3 id="m2">testClassPkg.TestLoginPage#invalidLoginPage</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>adam</td><td>Uy@1Ou4WbC</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">testClassPkg.TestLoginPage#invalidLoginPage</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>adam</td><td>admin</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">testClassPkg.TestLoginPage#invalidLoginPage</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>george.tofari</td><td>admin</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">testClassPkg.TestLoginPage#loginPage</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">testClassPkg.TestLoginPage#loginPage</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>Admin</td><td>Uy@1Ou4WbC</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>PersonalDetails</h2><h3 id="m7">testClassPkg.TestMyInfoModule#loginToApplication</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td><td>George</td><td>Tofari</td><td>Single</td><td>Male</td><td>Albanian</td><td>PN15453465468</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">testClassPkg.TestMyInfoModule#personalDetailsform</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td><td>George</td><td>Tofari</td><td>Single</td><td>Male</td><td>Albanian</td><td>PN15453465468</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>ContactDetails</h2><h3 id="m9">testClassPkg.TestMyInfoModule#contactDetailsForm</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th><th>Parameter #9</th><th>Parameter #10</th><th>Parameter #11</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td><td>181, Richie Street</td><td>Downtown south</td><td>Downtown</td><td>United States</td><td>Alaska</td><td>9.565633312E9</td><td>george.tofari@orangehrm.com</td><td>george.tofari@gmail.com</td><td>Alaska</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">testClassPkg.TestMyInfoModule#contactDetailsForm</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th><th>Parameter #9</th><th>Parameter #10</th><th>Parameter #11</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td><td>181, Richie Street</td><td>Downtown south</td><td>Downtown</td><td>India</td><td>Alaska</td><td>9.565633312E9</td><td>george.tofari@orangehrm.com</td><td>george.tofari@gmail.com</td><td>Tamil nadu</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">testClassPkg.TestMyInfoModule#loginToApplication</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td><td>George</td><td>Tofari</td><td>Single</td><td>Male</td><td>Albanian</td><td>PN15453465468</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>EmergencyContact</h2><h3 id="m12">testClassPkg.TestMyInfoModule#loginToApplication</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td><td>George</td><td>Tofari</td><td>Single</td><td>Male</td><td>Albanian</td><td>PN15453465468</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>SocialMediaDetails</h2><h3 id="m13">testClassPkg.TestMyInfoModule#SocialMediaForm</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td><td>Facebook</td><td>Tofari</td><td>https://fb.com/tofari</td><td>1.0</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">testClassPkg.TestMyInfoModule#SocialMediaForm</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td><td>Twitter</td><td>Cousin</td><td>https://twt.com/george</td><td>0.0</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m15">testClassPkg.TestMyInfoModule#loginToApplication</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td><td>George</td><td>Tofari</td><td>Single</td><td>Male</td><td>Albanian</td><td>PN15453465468</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>DependentsDetails</h2><h3 id="m16">testClassPkg.TestMyInfoModule#DependentForm</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td><td>Cailey</td><td>Mon, 09 Oct 1995</td><td>Other</td><td>Cousin</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m17">testClassPkg.TestMyInfoModule#DependentForm</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td><td>Bradman</td><td>Sat, 10 Jun 2000</td><td>Other</td><td>Brother</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m18">testClassPkg.TestMyInfoModule#loginToApplication</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td><td>George</td><td>Tofari</td><td>Single</td><td>Male</td><td>Albanian</td><td>PN15453465468</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>ImmigrationDetails</h2><h3 id="m19">testClassPkg.TestMyInfoModule#ImmigrationForm</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th><th>Parameter #9</th><th>Parameter #10</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td><td>Visa</td><td>VS655465</td><td>Mon, 21 Dec 2020</td><td>Tue, 20 Dec 2022</td><td>Sat, 10 Jun 2000</td><td>Yes</td><td>No Comments</td><td>United States</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m20">testClassPkg.TestMyInfoModule#ImmigrationForm</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th><th>Parameter #9</th><th>Parameter #10</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td><td>Passport</td><td>U5945153</td><td>Tue, 10 Jan 2012</td><td>Fri, 01 Oct 2032</td><td>Fri, 10 Jan 2031</td><td>Yes</td><td>No Comments</td><td>India</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m21">testClassPkg.TestMyInfoModule#loginToApplication</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td><td>George</td><td>Tofari</td><td>Single</td><td>Male</td><td>Albanian</td><td>PN15453465468</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>MembershipDetails</h2><h3 id="m22">testClassPkg.TestMyInfoModule#MembershipForm</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td><td>AMSUS Membership</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a href=&quot;#/pim/my_info&quot; ui-sref=&quot;pim.my_info&quot; ui-sref-opts=&quot;{reload: true, notify: true}&quot; ng-attr-target=&quot;{{undefined}}&quot; id=&quot;menu_pim_viewMyDetails&quot; class=&quot;waves-effect waves-orange active current&quot; onmousedown=&quot;setClickedOnForNavigationTracking(&apos;main_menu&apos;)&quot; onkeydown=&quot;handleKeyPress(event,&apos;main_menu&apos;)&quot;&gt;...&lt;/a&gt; is not clickable at point (95, 290). Other element would receive the click: &lt;div id=&quot;preloader&quot; class=&quot;center-align loading&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=100.0.4896.60)
+Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
+System info: host: &apos;DESKTOP-1Q7D8OU&apos;, ip: &apos;192.168.1.88&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4b427907db9283514dd3b647ff6b31b9, clickElement {id=aa28ed41-3705-4077-ad62-9ab8f7f30f4c}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.60, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\manoh\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61734}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61734/devtoo..., se:cdpVersion: 100.0.4896.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (4b427907db9283514dd3b647ff6b31b9)] -&gt; xpath: //a[@id=&apos;menu_pim_viewMyDetails&apos;]]
+Session ID: 4b427907db9283514dd3b647ff6b31b9
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy19.click(Unknown Source)
+	at objectClassPkg.MyInfoPageObjects.fillMembershipForm(MyInfoPageObjects.java:336)
+	at testClassPkg.TestMyInfoModule.MembershipForm(TestMyInfoModule.java:121)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">testClassPkg.TestMyInfoModule#loginToApplication</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td><td>George</td><td>Tofari</td><td>Single</td><td>Male</td><td>Albanian</td><td>PN15453465468</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m23">testClassPkg.TestMyInfoModule#MembershipForm</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td><td>USAU Membership</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //div[@class=&apos;toast-message&apos;]&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at testClassPkg.TestMyInfoModule.MembershipForm(TestMyInfoModule.java:125)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;toast-message&apos;]&quot;}
+  (Session info: chrome=100.0.4896.60)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
+System info: host: &apos;DESKTOP-1Q7D8OU&apos;, ip: &apos;192.168.1.88&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4b427907db9283514dd3b647ff6b31b9, findElement {using=xpath, value=//div[@class=&apos;toast-message&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.60, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\manoh\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61734}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61734/devtoo..., se:cdpVersion: 100.0.4896.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4b427907db9283514dd3b647ff6b31b9
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:382)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy19.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	... 29 more
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m24">testClassPkg.TestMyInfoModule#loginToApplication</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td><td>George</td><td>Tofari</td><td>Single</td><td>Male</td><td>Albanian</td><td>PN15453465468</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>EducationDetails</h2><h3 id="m25">testClassPkg.TestMyInfoModule#AddEducationForm</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td><td>Master&apos;s Degree</td><td>MIT</td><td>M Com</td></tr><tr><th colspan="5">Exception</th></tr><tr><td colspan="5"><div class="stacktrace">java.lang.AssertionError: expected [Successfully Saved] but found [TypeError: [orangeHrm Error] Cannot read properties of undefined (reading &apos;unshift&apos;)]
+	at testClassPkg.TestMyInfoModule.AddEducationForm(TestMyInfoModule.java:140)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m26">testClassPkg.TestMyInfoModule#AddEducationForm</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td><td>Bachelor&apos;s Degree</td><td>MIT</td><td>B Com</td></tr><tr><th colspan="5">Exception</th></tr><tr><td colspan="5"><div class="stacktrace">java.lang.AssertionError: expected [Successfully Saved] but found [TypeError: [orangeHrm Error] Cannot read properties of undefined (reading &apos;unshift&apos;)]
+	at testClassPkg.TestMyInfoModule.AddEducationForm(TestMyInfoModule.java:140)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m27">testClassPkg.TestMyInfoModule#loginToApplication</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td><td>George</td><td>Tofari</td><td>Single</td><td>Male</td><td>Albanian</td><td>PN15453465468</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>WorkExperienceDetails</h2><h3 id="m28">testClassPkg.TestMyInfoModule#AddWorkExperienceForm</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td><td>HCL</td><td>Sales Assistant</td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">java.lang.AssertionError: expected [Successfully Saved] but found [TypeError: [orangeHrm Error] Cannot read properties of undefined (reading &apos;unshift&apos;)]
+	at testClassPkg.TestMyInfoModule.AddWorkExperienceForm(TestMyInfoModule.java:153)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m29">testClassPkg.TestMyInfoModule#AddWorkExperienceForm</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td><td>Dominos</td><td>Sales Manager</td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">java.lang.AssertionError: expected [Successfully Saved] but found [TypeError: [orangeHrm Error] Cannot read properties of undefined (reading &apos;unshift&apos;)]
+	at testClassPkg.TestMyInfoModule.AddWorkExperienceForm(TestMyInfoModule.java:153)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m30">testClassPkg.TestMyInfoModule#loginToApplication</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td><td>George</td><td>Tofari</td><td>Single</td><td>Male</td><td>Albanian</td><td>PN15453465468</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>LanguageDetails</h2><h3 id="m31">testClassPkg.TestMyInfoModule#AddLanguage</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td><td>Japanese</td><td>Good</td><td>Writing</td></tr><tr><th colspan="5">Exception</th></tr><tr><td colspan="5"><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a href=&quot;#/pim/my_info&quot; ui-sref=&quot;pim.my_info&quot; ui-sref-opts=&quot;{reload: true, notify: true}&quot; ng-attr-target=&quot;{{undefined}}&quot; id=&quot;menu_pim_viewMyDetails&quot; class=&quot;waves-effect waves-orange active current&quot; onmousedown=&quot;setClickedOnForNavigationTracking(&apos;main_menu&apos;)&quot; onkeydown=&quot;handleKeyPress(event,&apos;main_menu&apos;)&quot;&gt;...&lt;/a&gt; is not clickable at point (95, 290). Other element would receive the click: &lt;div class=&quot;modal show&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; style=&quot;display: block;&quot; aria-modal=&quot;true&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=100.0.4896.60)
+Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
+System info: host: &apos;DESKTOP-1Q7D8OU&apos;, ip: &apos;192.168.1.88&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [95c75771dc137e8bf9fbd09b09ecedcd, clickElement {id=8e9afcaf-9849-49fd-b690-d2fe243a2b25}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.60, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\manoh\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61986}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61986/devtoo..., se:cdpVersion: 100.0.4896.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (95c75771dc137e8bf9fbd09b09ecedcd)] -&gt; xpath: //a[@id=&apos;menu_pim_viewMyDetails&apos;]]
+Session ID: 95c75771dc137e8bf9fbd09b09ecedcd
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy19.click(Unknown Source)
+	at objectClassPkg.MyInfoPageObjects.fillLanguageForm(MyInfoPageObjects.java:416)
+	at testClassPkg.TestMyInfoModule.AddLanguage(TestMyInfoModule.java:176)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m32">testClassPkg.TestMyInfoModule#AddLanguage</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td><td>English</td><td>Good</td><td>Reading</td></tr><tr><th colspan="5">Exception</th></tr><tr><td colspan="5"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //div[@class=&apos;toast-message&apos;]&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at testClassPkg.TestMyInfoModule.AddLanguage(TestMyInfoModule.java:180)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;toast-message&apos;]&quot;}
+  (Session info: chrome=100.0.4896.60)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
+System info: host: &apos;DESKTOP-1Q7D8OU&apos;, ip: &apos;192.168.1.88&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [95c75771dc137e8bf9fbd09b09ecedcd, findElement {using=xpath, value=//div[@class=&apos;toast-message&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.60, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\manoh\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61986}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61986/devtoo..., se:cdpVersion: 100.0.4896.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 95c75771dc137e8bf9fbd09b09ecedcd
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:382)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy19.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	... 29 more
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m33">testClassPkg.TestMyInfoModule#loginToApplication</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td><td>George</td><td>Tofari</td><td>Single</td><td>Male</td><td>Albanian</td><td>PN15453465468</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>SkillsDetails</h2><h3 id="m34">testClassPkg.TestMyInfoModule#AddSkillsForm</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td><td>Programming</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">java.lang.AssertionError: expected [Successfully Saved] but found [TypeError: [orangeHrm Error] Cannot read properties of undefined (reading &apos;unshift&apos;)]
+	at testClassPkg.TestMyInfoModule.AddSkillsForm(TestMyInfoModule.java:167)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m35">testClassPkg.TestMyInfoModule#AddSkillsForm</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td><td>Accounting</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //div[@class=&apos;toast-message&apos;]&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at testClassPkg.TestMyInfoModule.AddSkillsForm(TestMyInfoModule.java:166)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;toast-message&apos;]&quot;}
+  (Session info: chrome=100.0.4896.60)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
+System info: host: &apos;DESKTOP-1Q7D8OU&apos;, ip: &apos;192.168.1.88&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f3f0e7b1ee79e6b95414684738cdfaec, findElement {using=xpath, value=//div[@class=&apos;toast-message&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.60, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\manoh\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62053}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62053/devtoo..., se:cdpVersion: 100.0.4896.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f3f0e7b1ee79e6b95414684738cdfaec
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:382)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy19.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	... 29 more
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m36">testClassPkg.TestMyInfoModule#loginToApplication</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th></tr><tr class="param stripe"><td>george.tofari</td><td>Uy@1Ou4WbC</td><td>George</td><td>Tofari</td><td>Single</td><td>Male</td><td>Albanian</td><td>PN15453465468</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

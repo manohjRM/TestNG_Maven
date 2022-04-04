@@ -4,16 +4,11 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.Locale;
 
 import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.DateUtil;
 import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.util.DateFormatConverter;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -91,6 +86,38 @@ public class DataProviderClass extends MainClass{
 	public Object[][] fillMembershipDetails() throws Exception{
 		shName = "Membership";
 		String[] header = {"UserName", "Password", "Membership"};
+		Object[][] data = ReadExcelData(shName, header);
+		return data;
+	}
+	
+	@DataProvider(name="WorkExperience")
+	public Object[][] fillWorkExperienceDetails() throws Exception{
+		shName = "WorkExperience";
+		String[] header = {"UserName", "Password", "Employer", "Job"};
+		Object[][] data = ReadExcelData(shName, header);
+		return data;
+	}
+	
+	@DataProvider(name="Education")
+	public Object[][] fillEducationDetails() throws Exception{
+		shName = "Education";
+		String[] header = {"UserName", "Password", "Level", "Institute", "Major"};
+		Object[][] data = ReadExcelData(shName, header);
+		return data;
+	}
+	
+	@DataProvider(name="Language")
+	public Object[][] fillLanguageDetails() throws Exception{
+		shName = "Language";
+		String[] header = {"UserName", "Password", "Language", "Fluency", "Competency"};
+		Object[][] data = ReadExcelData(shName, header);
+		return data;
+	}
+	
+	@DataProvider(name="Skills")
+	public Object[][] fillSkillsDetails() throws Exception{
+		shName = "Skills";
+		String[] header = {"UserName", "Password", "Skills"};
 		Object[][] data = ReadExcelData(shName, header);
 		return data;
 	}

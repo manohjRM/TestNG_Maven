@@ -1,20 +1,13 @@
 package testClassPkg;
 
 import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
-
 import java.time.Duration;
 
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
-
 import dataProviderClassPkg.DataProviderClass;
-import mainClassPkg.MainClass;
 import objectClassPkg.LoginPageObjects;
 import objectClassPkg.MyInfoPageObjects;
 
@@ -135,11 +128,11 @@ public class TestMyInfoModule extends TestLoginPage{
 		CaptureScreen(driver, driver.getTitle());
 		Thread.sleep(2000);
 	}
-	@Test(dependsOnMethods = "loginToApplication")
-	void AddEducationForm() throws Exception {
+	@Test(dataProvider = "Education", dataProviderClass = DataProviderClass.class, dependsOnMethods = "loginToApplication")
+	void AddEducationForm(String UserName, String Password, String Level, String Institute, String Major) throws Exception {
 		MyInfoPageObjects obj1 = new MyInfoPageObjects(driver);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		obj1.fillEducationForm("Bachelor's Degree", "MIT", "Science");
+		obj1.fillEducationForm(Level, Institute, Major);
 		System.out.println(driver.getTitle());
 		Thread.sleep(2500);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -148,25 +141,11 @@ public class TestMyInfoModule extends TestLoginPage{
 		System.out.println(obj1.tmsg.getText());
 		Thread.sleep(2000);
 	}
-	@Test(dependsOnMethods = "loginToApplication")
-	void AddWorkExperienceForm() throws Exception {
+	@Test(dataProvider = "WorkExperience", dataProviderClass = DataProviderClass.class, dependsOnMethods = "loginToApplication")
+	void AddWorkExperienceForm(String UserName, String Password, String Employer, String Role) throws Exception {
 		MyInfoPageObjects obj1 = new MyInfoPageObjects(driver);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		obj1.fillWorkExperience("CTS", "QA");
-		System.out.println(driver.getTitle());
-		Thread.sleep(2500);
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOf(obj1.tmsg));
-		Assert.assertEquals(obj1.tmsg.getText(), "Successfully Saved");
-		System.out.println(obj1.tmsg.getText());
-		Thread.sleep(2000);
-	}
-	
-	@Test(dependsOnMethods = "loginToApplication")
-	void AddSkillsForm() throws Exception {
-		MyInfoPageObjects obj1 = new MyInfoPageObjects(driver);
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		obj1.fillSkillsForm("Programming");
+		obj1.fillWorkExperience(Employer, Role);
 		System.out.println(driver.getTitle());
 		Thread.sleep(2500);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -176,11 +155,25 @@ public class TestMyInfoModule extends TestLoginPage{
 		Thread.sleep(2000);
 	}
 	
-	@Test(dependsOnMethods = "loginToApplication")
-	void AddLanguage() throws Exception {
+	@Test(dataProvider = "Skills", dataProviderClass = DataProviderClass.class, dependsOnMethods = "loginToApplication")
+	void AddSkillsForm(String UserName, String Password, String Skills) throws Exception {
 		MyInfoPageObjects obj1 = new MyInfoPageObjects(driver);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		obj1.fillLanguageForm("English", "Writing", "Good");
+		obj1.fillSkillsForm(Skills);
+		System.out.println(driver.getTitle());
+		Thread.sleep(2500);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOf(obj1.tmsg));
+		Assert.assertEquals(obj1.tmsg.getText(), "Successfully Saved");
+		System.out.println(obj1.tmsg.getText());
+		Thread.sleep(2000);
+	}
+	
+	@Test(dataProvider = "Language", dataProviderClass = DataProviderClass.class, dependsOnMethods = "loginToApplication")
+	void AddLanguage(String UserName, String Password, String Language, String Fluency, String Competency) throws Exception {
+		MyInfoPageObjects obj1 = new MyInfoPageObjects(driver);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		obj1.fillLanguageForm(Language, Fluency, Competency);
 		System.out.println(driver.getTitle());
 		Thread.sleep(2500);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));

@@ -66,4 +66,64 @@
   		</class>
   	</classes>
   </test>
+  <test name="ImmigrationDetails">
+  	<classes>
+  		<class name="testClassPkg.TestMyInfoModule">
+  			<methods>
+  			<include name="loginToApplication"></include>
+      		<include name="ImmigrationForm"></include>
+      	</methods>
+  		</class>
+  	</classes>
+  </test>
+  <test name="MembershipDetails">
+  	<classes>
+  		<class name="testClassPkg.TestMyInfoModule">
+  			<methods>
+  			<include name="loginToApplication"></include>
+      		<include name="MembershipForm"></include>
+      	</methods>
+  		</class>
+  	</classes>
+  </test>
+  <test name="EducationDetails">
+  	<classes>
+  		<class name="testClassPkg.TestMyInfoModule">
+  			<methods>
+  			<include name="loginToApplication"></include>
+      		<include name="AddEducationForm"></include>
+      	</methods>
+  		</class>
+  	</classes>
+  </test>
+  <test name="WorkExperienceDetails">
+  	<classes>
+  		<class name="testClassPkg.TestMyInfoModule">
+  			<methods>
+  			<include name="loginToApplication"></include>
+      		<include name="AddWorkExperienceForm"></include>
+      	</methods>
+  		</class>
+  	</classes>
+  </test>
+  <test name="LanguageDetails">
+  	<classes>
+  		<class name="testClassPkg.TestMyInfoModule">
+  			<methods>
+  			<include name="loginToApplication"></include>
+      		<include name="AddLanguage"></include>
+      	</methods>
+  		</class>
+  	</classes>
+  </test>
+  <test name="SkillsDetails">
+  	<classes>
+  		<class name="testClassPkg.TestMyInfoModule">
+  			<methods>
+  			<include name="loginToApplication"></include>
+      		<include name="AddSkillsForm"></include>
+      	</methods>
+  		</class>
+  	</classes>
+  </test>
 </suite>
