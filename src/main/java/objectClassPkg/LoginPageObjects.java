@@ -1,13 +1,12 @@
 package objectClassPkg;
 
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import mainClassPkg.MainClass;
 
 public class LoginPageObjects {
 	WebDriver driver;
@@ -35,25 +34,16 @@ public class LoginPageObjects {
 	WebElement retryPage;
 	
 	public void login(String UName, String Pwd) throws Exception {
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		username.sendKeys(UName);
 		password.sendKeys(Pwd);
 		try {
 			loginBtn.click();
 		}catch(Exception e) {
-			String retry = retryPage.getText();
+			//String retry = retryPage.getText();
 			retryLogin.click();	
 		}
 		
 	}
-	public void logout() {
-		MainClass obj = new MainClass();
-		try {
-			acc_drpdwn.click();
-			logoutBtn.click();
-		}
-		catch(Exception e) {
-			System.out.println(tmsg.getText());
-		}
-	}
+	
 }
